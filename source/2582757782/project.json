@@ -1,0 +1,146 @@
+{
+	"approved" : true,
+	"contentrating" : "Everyone",
+	"description" : "[b]🎵 Music [url=https://youtu.be/222Aae8SVO0] source[/url][/b]\r\n[h1] ---------------------------------[/h1]\r\n[h1]Tags[/h1]\r\n[h1] ---------------------------------[/h1]\r\n- Space \r\n- Spaceman \r\n- Galaxy \r\n- Stars\r\n- Universe \r\n- Neon\r\n- Rainbow\r\n- Nebula \r\n- Astronaut\r\n- Boat\r\n- Lake\r\n- River\r\n- Ocean\r\n- Fish\r\n- Pond\r\n- Fisherman \r\n- Lost\r\n- Moon\r\n- Planet\r\n- Clock\r\n[h1] ---------------------------------[/h1]",
+	"file" : "scene.json",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"clock" : 
+			{
+				"condition" : "reflection.value ==3",
+				"index" : 1,
+				"order" : 101,
+				"text" : "Clock Color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"coloring" : 
+			{
+				"index" : 4,
+				"order" : 104,
+				"text" : "Scene Coloring",
+				"type" : "color",
+				"value" : "0 0.47058823529411764 1"
+			},
+			"customtext" : 
+			{
+				"condition" : "reflection.value ==5",
+				"index" : 2,
+				"order" : 102,
+				"text" : "Custom Text",
+				"type" : "textinput",
+				"value" : "Stranded"
+			},
+			"fish1" : 
+			{
+				"fraction" : true,
+				"index" : 8,
+				"max" : 5,
+				"min" : 0,
+				"order" : 108,
+				"precision" : 2,
+				"step" : 0.10000000000000001,
+				"text" : "Fish Amount",
+				"type" : "slider",
+				"value" : 1
+			},
+			"paddles" : 
+			{
+				"index" : 5,
+				"order" : 105,
+				"text" : "Paddles",
+				"type" : "bool",
+				"value" : true
+			},
+			"reflection" : 
+			{
+				"index" : 0,
+				"options" : 
+				[
+					{
+						"label" : "Galaxy",
+						"value" : "1"
+					},
+					{
+						"label" : "Nebula",
+						"value" : "2"
+					},
+					{
+						"label" : "Clock",
+						"value" : "3"
+					},
+					{
+						"label" : "Moon",
+						"value" : "4"
+					},
+					{
+						"label" : "Custom Text",
+						"value" : "5"
+					},
+					{
+						"label" : "None",
+						"value" : "6"
+					}
+				],
+				"order" : 100,
+				"text" : "<hr><h3>Scene</h3><hr>",
+				"type" : "combo",
+				"value" : "4"
+			},
+			"reflectionstrength" : 
+			{
+				"fraction" : true,
+				"index" : 7,
+				"max" : 0.5,
+				"min" : 0.10000000000000001,
+				"order" : 107,
+				"precision" : 3,
+				"step" : 0.010000000000000002,
+				"text" : "Reflection Strength",
+				"type" : "slider",
+				"value" : 0.25
+			},
+			"schemecolor" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.00392156862745098 0.043137254901960784 0.10196078431372549"
+			},
+			"snow" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "Snow",
+				"type" : "bool",
+				"value" : false
+			},
+			"textsize" : 
+			{
+				"condition" : "reflection.value ==5",
+				"fraction" : true,
+				"index" : 3,
+				"max" : 200,
+				"min" : 50,
+				"order" : 103,
+				"precision" : 2,
+				"step" : 0.10000000000000001,
+				"text" : "Text Size",
+				"type" : "slider",
+				"value" : 150
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Sci-Fi" ],
+	"title" : "Stranded",
+	"type" : "scene",
+	"version" : 3,
+	"visibility" : "public",
+	"workshopid" : "2582757782",
+	"workshopurl" : "steam://url/CommunityFilePage/2582757782"
+}

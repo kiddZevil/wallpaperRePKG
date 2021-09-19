@@ -1,0 +1,3102 @@
+{
+	"camera" : 
+	{
+		"center" : "459.89374 -57.32386 -1.00000",
+		"eye" : "459.89374 -57.32386 0.00000",
+		"up" : "0.00000 1.00000 0.00000"
+	},
+	"general" : 
+	{
+		"ambientcolor" : "0.30196 0.30196 0.30196",
+		"bloom" : false,
+		"bloomhdrfeather" : 1.0,
+		"bloomhdriterations" : 8,
+		"bloomhdrscatter" : 1.6189999580383301,
+		"bloomhdrstrength" : 2.0,
+		"bloomhdrthreshold" : 0.17000000178813934,
+		"bloomstrength" : 1.0,
+		"bloomthreshold" : 0.0,
+		"camerafade" : true,
+		"cameraparallax" : false,
+		"cameraparallaxamount" : 0.5,
+		"cameraparallaxdelay" : 0.10000000149011612,
+		"cameraparallaxmouseinfluence" : 0.5,
+		"camerapreview" : true,
+		"camerashake" : false,
+		"camerashakeamplitude" : 0.5,
+		"camerashakeroughness" : 1.0,
+		"camerashakespeed" : 0.30000001192092896,
+		"clearcolor" : "0.00000 0.00000 0.00000",
+		"clearenabled" : true,
+		"farz" : 10000.0,
+		"fov" : 50.0,
+		"hdr" : false,
+		"nearz" : 0.0099999997764825821,
+		"orthogonalprojection" : 
+		{
+			"height" : 2160,
+			"width" : 3840
+		},
+		"skylightcolor" : "0.30000 0.30000 0.30000",
+		"zoom" : 1.0
+	},
+	"objects" : 
+	[
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2549,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 3021,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1.0,
+								"color" : "1 1 1"
+							},
+							"id" : 3022
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/workshop/2579944702/waterripple/effect.json",
+					"id" : 55,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"animationspeed" : 0.25,
+								"ratio" : 1.8,
+								"ripplestrength" : 0.20000000000000001,
+								"scale" : 1.5,
+								"scrolldirection" : 0,
+								"scrollspeed" : 0
+							},
+							"id" : 56,
+							"textures" : 
+							[
+								null,
+								"workshop/2579944702/masks/waterripple_mask_c30d4daf",
+								"workshop/2579944702/djdfjd"
+							]
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/waterflow/effect.json",
+					"id" : 194,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"phasescale" : 2.0,
+								"speed" : 0.089999999999999997,
+								"strength" : 5
+							},
+							"id" : 195,
+							"textures" : [ null, "masks/waterflow_mask_426e5bb6", "effects/waterflowphase" ]
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 58,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1.0,
+								"color" : 
+								{
+									"user" : "coloring",
+									"value" : "1 0 0"
+								}
+							},
+							"id" : 59
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 324,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1,
+								"color" : 
+								{
+									"script" : "'use strict';\nexport let __workshopId = '2105925974';\n\nimport * as WEColor from 'WEColor';\n\nexport var scriptProperties = createScriptProperties()\n\t.addCheckbox({\n\t\tname: 'audioRainboweffect',\n\t\tlabel: 'Audio Rainbow Effect',\n\t\tvalue: true\n\t})\n\t.addCheckbox({\n\t\tname: 'rainbowEffect',\n\t\tlabel: 'Rainbow Effect',\n\t\tvalue: false\n\t})\n\t.addSlider({\n\t\tname: 'rainbowSpeed',\n\t\tlabel: 'Rainbow Speed',\n\t\tvalue: 1,\n\t\tmin: 0.1,\n\t\tmax: 5,\n\t\tinteger: false\n\t})\n\t.addSlider({\n\t\tname: 'rainbowSaturation',\n\t\tlabel: 'Rainbow Saturation',\n\t\tvalue: 1,\n\t\tmin: 0.1,\n\t\tmax: 10,\n\t\tinteger: false\n\t})\n\t.addSlider({\n\t\tname: 'rainbowBrightness',\n\t\tlabel: 'Rainbow Brightness',\n\t\tvalue: 1,\n\t\tmin: 0.1,\n\t\tmax: 10,\n\t\tinteger: false\n\t})\n\t.addSlider({\n\t\tname: 'audioSourcefrequency',\n\t\tlabel: 'Audio Source Frequency (Lower values for bass, higher for treble.) ',\n\t\tvalue: 0,\n\t\tmin: 0,\n\t\tmax: 15,\n\t\tinteger: true\n\t})\n\t.finish();\n\n//let rainbowSpeed = 1;\n//let rainbowSaturation = 1;\n//let rainbowBrightness = 1;\nlet frequencyResolution = 16; // Must be 16, 32 or 64 per channel.\n//let sourceFrequency = 0; // Must be smaller than frequencyResolution. Lower values for bass, higher for treble.\nlet smoothingRate = 2;\nlet audioBuffer = engine.registerAudioBuffers(frequencyResolution);\nvar smoothValue = 0;\n\n\n/**\n * @param {Vec3} value\n */\nexport function update(value) {\n\tif (scriptProperties.rainbowEffect == true) {\n\tvalue = WEColor.hsv2rgb({\n\t\tx: Date.now() / 2000 * scriptProperties.rainbowSpeed % 1,\n\t\ty: scriptProperties.rainbowSaturation,\n\t\tz: scriptProperties.rainbowBrightness\n\t});\n}\nlet audioDelta = audioBuffer.average[scriptProperties.audioSourcefrequency] - smoothValue;\n\tif (scriptProperties.audioRainboweffect == true) {\n\tsmoothValue += audioDelta * engine.frametime * smoothingRate;\n\tsmoothValue = Math.min(1.0, smoothValue);\n\tvalue = WEColor.hsv2rgb({\n\t\tx: smoothValue,\n\t\ty: scriptProperties.rainbowSaturation,\n\t\tz: scriptProperties.rainbowBrightness\n\t});\n\t}\n\treturn value;\n}\n",
+									"scriptproperties" : 
+									{
+										"audioRainboweffect" : true,
+										"audioSourcefrequency" : 0,
+										"rainbowBrightness" : 1,
+										"rainbowEffect" : false,
+										"rainbowSaturation" : 1,
+										"rainbowSpeed" : 1
+									},
+									"value" : "0.00000 0.47059 1.00000"
+								}
+							},
+							"id" : 325
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/godrays/effect.json",
+					"id" : 78,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"combos" : 
+							{
+								"NOISE" : 0
+							},
+							"constantshadervalues" : 
+							{
+								"noiseamount" : 0.40000000000000002,
+								"noisescale" : 3.0,
+								"noisesmoothness" : 0.20000000000000001,
+								"noisespeed" : 0.14999999999999999,
+								"raythreshold" : 0
+							},
+							"id" : 79
+						},
+						{
+							"combos" : 
+							{
+								"SAMPLES" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"center" : "0.5 0.5",
+								"color" : "1 1 1",
+								"rayintensity" : 0.68000000000000005,
+								"raylength" : 0.5
+							},
+							"id" : 81
+						},
+						{
+							"combos" : 
+							{
+								"KERNEL" : 0
+							},
+							"constantshadervalues" : 
+							{
+								"blurscale" : "1 1"
+							},
+							"id" : 82
+						},
+						{
+							"combos" : 
+							{
+								"KERNEL" : 0,
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"blurscale" : "1 1"
+							},
+							"id" : 83
+						},
+						{
+							"id" : 84,
+							"textures" : [ null, "_rt_imageLayerComposite_42_a" ]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/waterflow/effect.json",
+					"id" : 254,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"phasescale" : 1,
+								"speed" : 0.040000000000000001,
+								"strength" : 5
+							},
+							"id" : 255,
+							"textures" : [ null, "masks/waterflow_mask_728de645", "effects/waterflowphase" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 42,
+			"image" : "models/Smoke 2.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "water texture",
+			"origin" : "2073.92480 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "2.17409 2.17409 2.17409",
+			"size" : "1920.00000 1080.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/waterflow/effect.json",
+					"id" : 2606,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"phasescale" : 0.0099999997764825821,
+								"speed" : 0.050000000000000003,
+								"strength" : 1.0
+							},
+							"id" : 2607,
+							"textures" : [ null, "masks/waterflow_mask_67f2d563", "effects/waterflowphase" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 2602,
+			"image" : "models/23963_bjqc.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Galaxy",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "-3.58172 3.58172 3.58172",
+			"size" : "1278.00000 718.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "1",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2834,
+			"image" : "models/purple-nebula-wallpaper.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Nebula",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "3840.00000 2160.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "2",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/colorkey/effect.json",
+					"id" : 3164,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 0.0,
+								"color" : "0 0 0",
+								"fuzziness" : 0.28999999999999998,
+								"tolerance" : 0.19
+							},
+							"id" : 3165
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/blurprecise/effect.json",
+					"id" : 158,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"scale" : "4 4"
+							},
+							"id" : 159
+						},
+						{
+							"combos" : 
+							{
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"scale" : "4 4"
+							},
+							"id" : 160
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/opacity/effect.json",
+					"id" : 265,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1.0
+							},
+							"id" : 266,
+							"textures" : [ null, "masks/opacity_mask_3fdcb3bf" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3162,
+			"image" : "models/snbrHBRigvvzjxNGuUtcck.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Moon",
+			"origin" : "1510.84595 1309.30603 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.45000 0.45000 0.45000",
+			"size" : "3240.00000 3240.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "4",
+					"name" : "reflection"
+				},
+				"value" : true
+			}
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 237,
+			"instanceoverride" : 
+			{
+				"id" : 238,
+				"rate" : 0.23999999463558197,
+				"size" : 0.49000000953674316
+			},
+			"locktransforms" : false,
+			"name" : "Clouds",
+			"origin" : "-1723.17114 462.03223 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/presets/rainperspective.json",
+			"scale" : "32.20585 1.00000 1.00000",
+			"visible" : false
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 298,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1.0,
+								"color" : "1 1 1"
+							},
+							"id" : 299
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/opacity/effect.json",
+					"id" : 301,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1
+							},
+							"id" : 302,
+							"textures" : [ null, "masks/opacity_mask_411bf7e2" ]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/opacity/effect.json",
+					"id" : 315,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 0.40000000000000002
+							},
+							"id" : 316
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 294,
+			"image" : "models/Neon Ring1.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Neon Ring1",
+			"origin" : "1516.99817 1304.29553 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.52208 1.52208 1.52208",
+			"size" : "1108.00000 1109.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "4",
+					"name" : "reflection"
+				},
+				"value" : true
+			}
+		},
+		{
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"anchor" : "none",
+			"angles" : "0.00000 0.00000 0.00000",
+			"backgroundbrightness" : 1.0,
+			"backgroundcolor" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "0.00000 0.00000 0.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"font" : "systemfont_arial",
+			"horizontalalign" : "center",
+			"id" : 245,
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Text Layer",
+			"opaquebackground" : false,
+			"origin" : "1920.00000 1250.00000 0.00000",
+			"padding" : 32,
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"pointsize" : 
+			{
+				"user" : "textsize",
+				"value" : 150.0
+			},
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "2533.00000 719.00000",
+			"solid" : true,
+			"text" : 
+			{
+				"user" : "customtext",
+				"value" : "Stranded"
+			},
+			"verticalalign" : "center",
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "5",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2742,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 120,
+			"instanceoverride" : 
+			{
+				"colorn" : 
+				{
+					"script" : "'use strict';\n\nimport * as WEColor from 'WEColor';\n\nlet rainbowSpeed = 1;\nlet rainbowSaturation = 1;\nlet rainbowBrightness = 1;\n\n/**\n * @param {Vec3} value\n */\nexport function update(value) {\n\n\tvalue = WEColor.hsv2rgb({\n\t\tx: Date.now() / 2000 * rainbowSpeed % 1,\n\t\ty: rainbowSaturation,\n\t\tz: rainbowBrightness\n\t});\n\t\n\treturn value;\n}\n",
+					"value" : "1.00000 1.00000 1.00000"
+				},
+				"count" : 
+				{
+					"user" : "fish1",
+					"value" : 1.0
+				},
+				"id" : 121,
+				"rate" : 1.2000000476837158,
+				"size" : 0.75
+			},
+			"locktransforms" : false,
+			"name" : "fish",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/presets/snowperspective.json",
+			"scale" : "1.00000 1.00000 1.00000",
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2547,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 0.25,
+			"angles" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c1" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c2" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0.01119
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 6.2943753071795863
+						}
+					],
+					"options" : 
+					{
+						"fps" : 0.0050000000000000001,
+						"length" : 1,
+						"mode" : "loop"
+					},
+					"relative" : true
+				},
+				"value" : "0.00000 0.00000 -0.93130"
+			},
+			"brightness" : 1.0,
+			"color" : "0.00000 0.00000 0.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 290,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 1.5707963267948966,
+								"perspective" : 0,
+								"scale" : 0.0099999997764825821,
+								"speed" : 1.5,
+								"strength" : 0.20000000000000001
+							},
+							"id" : 291
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/blurprecise/effect.json",
+					"id" : 163,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"scale" : "2 2"
+							},
+							"id" : 164
+						},
+						{
+							"combos" : 
+							{
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"scale" : "2 2"
+							},
+							"id" : 165
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3090,
+			"image" : "models/paddle.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "paddle",
+			"origin" : "2824.44897 1612.03589 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.85000 0.85000 0.85000",
+			"size" : "462.00000 161.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : "paddles",
+				"value" : true
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 0.25,
+			"angles" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c1" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c2" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 1.2533799999999999
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 7.5365653071795862
+						}
+					],
+					"options" : 
+					{
+						"fps" : 0.0076923076923076927,
+						"length" : 1,
+						"mode" : "loop"
+					},
+					"relative" : true
+				},
+				"value" : "0.00000 0.00000 -1.27420"
+			},
+			"brightness" : 1.0,
+			"color" : "0.00000 0.00000 0.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 280,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 1.5707963267948966,
+								"perspective" : 0,
+								"scale" : 0.0099999997764825821,
+								"speed" : 1.5,
+								"strength" : 0.20000000000000001
+							},
+							"id" : 281
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/blurprecise/effect.json",
+					"id" : 154,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"scale" : "2 2"
+							},
+							"id" : 155
+						},
+						{
+							"combos" : 
+							{
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"scale" : "2 2"
+							},
+							"id" : 156
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3132,
+			"image" : "models/paddle.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "paddle",
+			"origin" : "2892.11694 611.94830 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.85000 0.85000 0.85000",
+			"size" : "462.00000 161.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : "paddles",
+				"value" : true
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 0.25,
+			"angles" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c1" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c2" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 6.2831853071795862
+						}
+					],
+					"options" : 
+					{
+						"fps" : 0.0050000000000000001,
+						"length" : 1,
+						"mode" : "loop"
+					},
+					"relative" : true
+				},
+				"value" : "0.00000 0.00000 0.00000"
+			},
+			"brightness" : 1.0,
+			"color" : "0.00000 0.00000 0.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 97,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 1.5707963267948966,
+								"perspective" : 0,
+								"scale" : 0.0099999997764825821,
+								"speed" : 1,
+								"strength" : 0.13
+							},
+							"id" : 98
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/blurprecise/effect.json",
+					"id" : 3289,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"scale" : "2 2"
+							},
+							"id" : 3290
+						},
+						{
+							"combos" : 
+							{
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"scale" : "2 2"
+							},
+							"id" : 3291
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 68,
+			"image" : "models/boat.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "boat shadow",
+			"origin" : "1951.55273 1098.95605 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.81557 0.81557 0.81557",
+			"size" : "860.00000 1310.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2553,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 331,
+			"instanceoverride" : 
+			{
+				"count" : 2.0,
+				"id" : 332,
+				"size" : 3.0
+			},
+			"locktransforms" : false,
+			"name" : "Water Splash",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/workshop/2128373241/Rain_Splash_copy2.json",
+			"scale" : "1.00000 1.00000 1.00000",
+			"visible" : 
+			{
+				"user" : "snow",
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2551,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 3260,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1.0,
+								"color" : 
+								{
+									"user" : "clock",
+									"value" : "0 0 0"
+								}
+							},
+							"id" : 3261
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3194,
+			"image" : "models/workshop/2107481179/clockface9.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Clock Face",
+			"origin" : "1920.00000 1150.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "2.25000 2.25000 2.25000",
+			"size" : "960.00000 960.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "3",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : 
+			{
+				"script" : "'use strict';\nexport let __workshopId = '2107481179';\n\n/**\n * Bind this script to the angles property of a layer for a simple 2D rotation.\n */\n\nlet rotationSpeed = 0.1;\n\n/**\n * @param {Vec3} value\n */\nexport function update(value) {\n\tvalue.z = ((engine.timeOfDay * 24) % 1) * -360;\n\treturn value;\n}\n",
+				"value" : "0.00000 0.00000 0.00000"
+			},
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 3263,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1,
+								"color" : 
+								{
+									"user" : "clock",
+									"value" : "0 0 0"
+								}
+							},
+							"id" : 3264
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3221,
+			"image" : "models/workshop/2107481179/minute_white.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "minute",
+			"origin" : "1920.00000 1150.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "2.25000 2.25000 2.25000",
+			"size" : "960.00000 960.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "3",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 3266,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1,
+								"color" : 
+								{
+									"user" : "clock",
+									"value" : "0 0 0"
+								}
+							},
+							"id" : 3267
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3227,
+			"image" : "models/workshop/2107481179/center_dot_white.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "center",
+			"origin" : "1920.00000 1150.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "2.25000 2.25000 2.25000",
+			"size" : "24.00000 24.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "3",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : 
+			{
+				"script" : "'use strict';\nexport let __workshopId = '2107481179';\n\n/**\n* Bind this script to the angles property of a layer for a simple 2D rotation.\n*/\n\nlet rotationSpeed = 0.1;\n\n/**\n* @param {Vec3} value\n*/\nexport function update(value) {\nvalue.z = ((engine.timeOfDay * 1440) % 1) * -360;\nreturn value;\n}\n",
+				"value" : "0.00000 0.00000 0.00000"
+			},
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 3269,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1,
+								"color" : 
+								{
+									"user" : "clock",
+									"value" : "0 0 0"
+								}
+							},
+							"id" : 3270
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3224,
+			"image" : "models/workshop/2107481179/seconds_white.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "second",
+			"origin" : "1920.00000 1150.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "2.25000 2.25000 2.25000",
+			"size" : "960.00000 960.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "3",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"user" : "reflectionstrength",
+				"value" : 0.25
+			},
+			"angles" : 
+			{
+				"script" : "'use strict';\nexport let __workshopId = '2107481179';\n\n/**\n * Bind this script to the angles property of a layer for a simple 2D rotation.\n */\n\nlet rotationSpeed = 0.1;\n\n/**\n * @param {Vec3} value\n */\nexport function update(value) {\n\tvalue.z = engine.timeOfDay * -720;\n\treturn value;\n}\n",
+				"value" : "0.00000 0.00000 0.00000"
+			},
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 3272,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1,
+								"color" : 
+								{
+									"user" : "clock",
+									"value" : "0 0 0"
+								}
+							},
+							"id" : 3273
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3218,
+			"image" : "models/workshop/2107481179/hour_white.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "hour",
+			"origin" : "1920.00000 1150.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "2.25000 2.25000 2.25000",
+			"size" : "960.00000 960.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : 
+				{
+					"condition" : "3",
+					"name" : "reflection"
+				},
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 3256,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"config" : 
+			{
+				"passthrough" : true
+			},
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/workshop/2116673772/crt_scan_line/effect.json",
+					"id" : 127,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"Noise Intensity" : 0.10000000000000001,
+								"Noise Scale" : 1.0,
+								"Scan Line Intensity" : 0,
+								"Scan Line Size" : 5.5499999999999998,
+								"Scan Line Speed" : 20.0,
+								"Vignette Intensity" : 0.14000000000000001
+							},
+							"id" : 128
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/waterripple/effect.json",
+					"id" : 180,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"animationspeed" : 0.14999999999999999,
+								"ratio" : 1.0,
+								"ripplestrength" : 0.080000000000000002,
+								"scale" : 1.0,
+								"scrolldirection" : 0.0,
+								"scrollspeed" : 0.0
+							},
+							"id" : 181,
+							"textures" : [ null, null, "effects/waterripplenormal" ]
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/waterripple/effect.json",
+					"id" : 173,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"animationspeed" : 0.14999999999999999,
+								"ratio" : 1.0,
+								"ripplestrength" : 0.10000000000000001,
+								"scale" : 1.0,
+								"scrolldirection" : 0.0,
+								"scrollspeed" : 0.0
+							},
+							"id" : 174,
+							"textures" : [ null, null, "effects/waterripplenormal" ]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/workshop/2579944702/waterripple/effect.json",
+					"id" : 64,
+					"name" : "Advanced Water",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"animationspeed" : 0.23999999999999999,
+								"ratio" : 1.95,
+								"ripplestrength" : 0.10000000000000001,
+								"scale" : 1.79,
+								"scrolldirection" : 0,
+								"scrollspeed" : 0
+							},
+							"id" : 65,
+							"textures" : 
+							[
+								null,
+								"workshop/2579944702/masks/waterripple_mask_c30d4daf",
+								"workshop/2579944702/djdfjd"
+							]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 183,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 0.0,
+								"perspective" : 0,
+								"scale" : 31.760000000000002,
+								"speed" : 1.99,
+								"strength" : 0.089999999999999997
+							},
+							"id" : 184
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/blurprecise/effect.json",
+					"id" : 224,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"scale" : "0.5 0.5"
+							},
+							"id" : 225
+						},
+						{
+							"combos" : 
+							{
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"scale" : "0.5 0.5"
+							},
+							"id" : 226
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 124,
+			"image" : "models/util/composelayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "water effects",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "3840.00000 2160.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2545,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c1" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c2" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 6.2831853071795862
+						}
+					],
+					"options" : 
+					{
+						"fps" : 0.0050000000000000001,
+						"length" : 1,
+						"mode" : "loop"
+					},
+					"relative" : true
+				},
+				"value" : "0.00000 0.00000 -0.87266"
+			},
+			"brightness" : 1.0,
+			"color" : "0.58824 0.58824 0.58824",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 3095,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 1.5707963267948966,
+								"perspective" : 0,
+								"scale" : 0.0099999997764825821,
+								"speed" : 1.5,
+								"strength" : 0.20000000000000001
+							},
+							"id" : 3096
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 369,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"combos" : 
+							{
+								"BLENDMODE" : 30
+							},
+							"constantshadervalues" : 
+							{
+								"alpha" : 0.20000000000000001,
+								"color" : 
+								{
+									"user" : "coloring",
+									"value" : "0.00000 0.47059 1.00000"
+								}
+							},
+							"id" : 370
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3086,
+			"image" : "models/paddle.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "paddle",
+			"origin" : "2827.83740 1602.85181 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.85000 0.85000 0.85000",
+			"size" : "462.00000 161.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : "paddles",
+				"value" : true
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c1" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c2" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 1.23637
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 7.5195553071795862
+						}
+					],
+					"options" : 
+					{
+						"fps" : 0.0076923076923076927,
+						"length" : 1,
+						"mode" : "loop"
+					},
+					"relative" : true
+				},
+				"value" : "-0.00000 -0.00000 -1.23637"
+			},
+			"brightness" : 1.0,
+			"color" : "0.71373 0.71373 0.71373",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 3112,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 1.5707963267948966,
+								"perspective" : 0,
+								"scale" : 0.0099999997764825821,
+								"speed" : 2,
+								"strength" : 0.20000000000000001
+							},
+							"id" : 3113
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 361,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"combos" : 
+							{
+								"BLENDMODE" : 30
+							},
+							"constantshadervalues" : 
+							{
+								"alpha" : 0.20000000000000001,
+								"color" : 
+								{
+									"user" : "coloring",
+									"value" : "0.00000 0.47059 1.00000"
+								}
+							},
+							"id" : 362
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 3111,
+			"image" : "models/paddle.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "paddle",
+			"origin" : "2881.17944 608.66357 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.85000 0.85000 0.85000",
+			"size" : "462.00000 161.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"user" : "paddles",
+				"value" : true
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c1" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"c2" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 1,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 6.2831853071795862
+						}
+					],
+					"options" : 
+					{
+						"fps" : 0.0050000000000000001,
+						"length" : 1,
+						"mode" : "loop"
+					},
+					"relative" : true
+				},
+				"value" : "0.00000 0.00000 0.00000"
+			},
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/opacity/effect.json",
+					"id" : 2962,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"alpha" : 1.0
+							},
+							"id" : 2963,
+							"textures" : [ null, "masks/opacity_mask_b72c9717" ]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/tint/effect.json",
+					"id" : 46,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"combos" : 
+							{
+								"BLENDMODE" : 30
+							},
+							"constantshadervalues" : 
+							{
+								"alpha" : 0.20999999999999999,
+								"color" : 
+								{
+									"user" : "coloring",
+									"value" : "0.00000 0.47059 1.00000"
+								}
+							},
+							"id" : 47
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/waterwaves/effect.json",
+					"id" : 94,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"direction" : 1.5707963267948966,
+								"perspective" : 0.0,
+								"scale" : 0.0099999997764825821,
+								"speed" : 1,
+								"strength" : 0.13
+							},
+							"id" : 95
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/vhs/effect.json",
+					"id" : 2954,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"artifacts" : 0,
+								"chromatic" : 0.22,
+								"distortionspeed" : 0,
+								"distortionstrength" : 0,
+								"distortionwidth" : 0,
+								"scale" : 0,
+								"strength" : 1.0
+							},
+							"id" : 2955,
+							"textures" : [ null, "util/noise" ]
+						}
+					],
+					"visible" : false
+				}
+			],
+			"id" : 20,
+			"image" : "models/boat.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Boat",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "0.80000 0.80000 0.80000",
+			"size" : "860.00000 1310.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 374,
+			"instanceoverride" : 
+			{
+				"id" : 375
+			},
+			"locktransforms" : false,
+			"name" : "Dust motes",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/presets/dust_motes_0.json",
+			"scale" : "1.00000 1.00000 1.00000",
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2543,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 269,
+			"instanceoverride" : 
+			{
+				"colorn" : "1.00000 1.00000 1.00000",
+				"count" : 2.0,
+				"id" : 270
+			},
+			"locktransforms" : false,
+			"name" : "Snow flat",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : "particles/presets/snowflat.json",
+			"scale" : "1.00000 1.00000 1.00000",
+			"visible" : 
+			{
+				"user" : "snow",
+				"value" : false
+			}
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2541,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/godrays/effect.json",
+					"id" : 2695,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"noiseamount" : 0.40000000000000002,
+								"noisescale" : 3.0,
+								"noisesmoothness" : 0.20000000000000001,
+								"noisespeed" : 0.14999999999999999,
+								"raythreshold" : 0
+							},
+							"id" : 2696,
+							"textures" : [ null, null, "util/clouds_256" ]
+						},
+						{
+							"combos" : 
+							{
+								"SAMPLES" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"center" : "0.5 0.5",
+								"color" : "1 1 1",
+								"rayintensity" : 0.25,
+								"raylength" : 0.56999999999999995
+							},
+							"id" : 2697
+						},
+						{
+							"combos" : 
+							{
+								"KERNEL" : 0
+							},
+							"constantshadervalues" : 
+							{
+								"blurscale" : "1 1"
+							},
+							"id" : 2698
+						},
+						{
+							"combos" : 
+							{
+								"KERNEL" : 0,
+								"VERTICAL" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"blurscale" : "1 1"
+							},
+							"id" : 2699
+						},
+						{
+							"id" : 2700,
+							"textures" : [ null, "_rt_imageLayerComposite_130_b" ]
+						}
+					],
+					"visible" : false
+				},
+				{
+					"file" : "effects/workshop/2116673772/crt_scan_line/effect.json",
+					"id" : 133,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"Noise Intensity" : 0.040000000000000001,
+								"Noise Scale" : 1,
+								"Scan Line Intensity" : 0,
+								"Scan Line Size" : 5.5499999999999998,
+								"Scan Line Speed" : 20,
+								"Vignette Intensity" : 0
+							},
+							"id" : 134
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/vhs/effect.json",
+					"id" : 3284,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"artifacts" : 0,
+								"chromatic" : 0.059999999999999998,
+								"distortionspeed" : 0,
+								"distortionstrength" : 0,
+								"distortionwidth" : 0,
+								"scale" : 0,
+								"strength" : 1.0
+							},
+							"id" : 3285,
+							"textures" : [ null, "util/noise" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 130,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Overall Effects",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : false
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2539,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/workshop/2579944702/waterripple/effect.json",
+					"id" : 27,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"animationspeed" : 0.25,
+								"ratio" : 1.8,
+								"ripplestrength" : 0.22,
+								"scale" : 1.22,
+								"scrolldirection" : 3.1415926535897931,
+								"scrollspeed" : 0.40000000000000002
+							},
+							"id" : 0,
+							"textures" : 
+							[
+								null,
+								"workshop/2579944702/masks/waterripple_mask_c30d4daf",
+								"workshop/2579944702/djdfjd"
+							]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 23,
+			"image" : "models/workshop/2579944702/reflec rock.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Water (thx shockz)",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "734.00000 272.00000",
+			"solid" : true,
+			"visible" : false
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"color" : "1.00000 1.00000 1.00000",
+			"id" : 2596,
+			"intensity" : 2.25,
+			"light" : "point",
+			"locktransforms" : false,
+			"name" : "",
+			"origin" : "1920.00000 1080.00000 2000.00000",
+			"parallaxDepth" : "0.00000 0.00000",
+			"radius" : 1500.0,
+			"scale" : "1.00000 1.00000 1.00000",
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2746,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 1
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 60,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 1.1641532182693481e-09
+						}
+					],
+					"options" : 
+					{
+						"fps" : 10,
+						"length" : 60,
+						"mode" : "single"
+					}
+				},
+				"value" : 1.0
+			},
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "0.00000 0.00000 0.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2727,
+			"image" : "models/util/solidlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Intro",
+			"origin" : "1920.00000 1080.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "3840.00000 2160.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alpha" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 1
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 60,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"options" : 
+					{
+						"fps" : 6,
+						"length" : 60,
+						"mode" : "single"
+					}
+				},
+				"value" : 1.0
+			},
+			"anchor" : "none",
+			"angles" : "0.00000 0.00000 0.00000",
+			"backgroundbrightness" : 1.0,
+			"backgroundcolor" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/blend/effect.json",
+					"id" : 235,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"multiply" : 0.75
+							},
+							"id" : 236,
+							"textures" : [ null, "23963_bjqc" ]
+						}
+					],
+					"visible" : false
+				}
+			],
+			"font" : "fonts/opensticks.ttf",
+			"horizontalalign" : "center",
+			"id" : 204,
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "Text Layer",
+			"opaquebackground" : false,
+			"origin" : "1920.00000 1238.58411 0.00000",
+			"padding" : 32,
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"pointsize" : 50.0,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "1664.00000 227.00000",
+			"solid" : true,
+			"text" : "Stranded",
+			"verticalalign" : "center",
+			"visible" : false
+		},
+		{
+			"alpha" : 
+			{
+				"animation" : 
+				{
+					"c0" : 
+					[
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 0,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 1
+						},
+						{
+							"back" : 
+							{
+								"enabled" : true,
+								"x" : -1,
+								"y" : 0
+							},
+							"frame" : 60,
+							"front" : 
+							{
+								"enabled" : true,
+								"x" : 1,
+								"y" : 0
+							},
+							"lockangle" : true,
+							"locklength" : true,
+							"value" : 0
+						}
+					],
+					"options" : 
+					{
+						"fps" : 6,
+						"length" : 60,
+						"mode" : "single"
+					}
+				},
+				"value" : 1.0
+			},
+			"anchor" : "none",
+			"angles" : "0.00000 0.00000 0.00000",
+			"backgroundbrightness" : 1.0,
+			"backgroundcolor" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/blend/effect.json",
+					"id" : 242,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"combos" : 
+							{
+								"TRANSFORMUV" : 1
+							},
+							"constantshadervalues" : 
+							{
+								"blendangle" : 3.1299999999999999,
+								"blendoffset" : "0 0",
+								"blendscale" : 2,
+								"multiply" : 0.70999999999999996
+							},
+							"id" : 243,
+							"textures" : [ null, "23963_bjqc" ]
+						}
+					],
+					"visible" : false
+				}
+			],
+			"font" : "fonts/Alcubierre.otf",
+			"horizontalalign" : "center",
+			"id" : 330,
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "",
+			"opaquebackground" : false,
+			"origin" : "1920.00000 1005.18127 0.00000",
+			"padding" : 32,
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"pointsize" : 35.0,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "1199.00000 171.00000",
+			"solid" : true,
+			"text" : "Animated By Bewie",
+			"verticalalign" : "center",
+			"visible" : false
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 2748,
+			"image" : "models/util/fullscreenlayer.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "-------------------------",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"angles" : "0.00000 0.00000 0.00000",
+			"id" : 2762,
+			"locktransforms" : false,
+			"maxtime" : 5.0,
+			"mintime" : 1.0,
+			"muteineditor" : true,
+			"name" : "Music",
+			"origin" : "0.00000 0.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"playbackmode" : "loop",
+			"scale" : "1.00000 1.00000 1.00000",
+			"sound" : [ "sounds/Osk - Aurora.mp3" ],
+			"startsilent" : false,
+			"volume" : 0.5
+		}
+	],
+	"version" : 1
+}

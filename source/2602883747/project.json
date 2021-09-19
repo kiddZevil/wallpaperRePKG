@@ -1,0 +1,47 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "deviantart.com/wlop/art/Lylian-859885183\nartstation.com/artwork/mDEd4Z\n\n-- Artwork by WLOP --",
+	"file" : "scene.json",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"eyebrowneffect" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Eyebrown effect",
+				"type" : "bool",
+				"value" : true
+			},
+			"eyemoveffect" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "Eye mov. Effect",
+				"type" : "bool",
+				"value" : true
+			},
+			"moutheffect" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Mouth effect",
+				"type" : "bool",
+				"value" : true
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.39608 0.69804 0.74510"
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Girls" ],
+	"title" : "Lylian By WLOP [4K]",
+	"type" : "scene",
+	"version" : 0
+}

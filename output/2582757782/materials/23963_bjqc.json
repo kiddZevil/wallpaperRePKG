@@ -1,0 +1,19 @@
+{
+	"passes" : 
+	[
+		{
+			"blending" : "translucent",
+			"combos" : 
+			{
+				"LIGHTING" : 1,
+				"VERSION" : 2
+			},
+			"constantshadervalues" : {},
+			"cullmode" : "nocull",
+			"depthtest" : "disabled",
+			"depthwrite" : "disabled",
+			"shader" : "genericimage2",
+			"textures" : [ "23963_bjqc" ]
+		}
+	]
+}

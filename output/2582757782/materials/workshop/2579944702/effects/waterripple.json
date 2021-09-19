@@ -1,0 +1,13 @@
+{
+	"passes" : 
+	[
+		{
+			"blending" : "normal",
+			"cullmode" : "nocull",
+			"depthtest" : "disabled",
+			"depthwrite" : "disabled",
+			"shader" : "workshop/2579944702/effects/waterripple",
+			"textures" : [ null, null, "workshop/2579944702/effects/waterripplenormal" ]
+		}
+	]
+}
