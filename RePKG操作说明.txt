@@ -1,0 +1,1 @@
+.\repkg extract -o ./output/8 D:\workspace\testrepkg\1\scene.pkg
