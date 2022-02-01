@@ -3,7 +3,7 @@ const path = require('path');
 const { execSync } = require('child_process'); 
 //读取路径
 const sourcePath = "./source";
-const readDir = fs.readdirSync(sourcePath);
+const readDir = getDir(sourcePath);
 readDir.forEach(fname => {
     const flag = fsExistsSync(path.join(sourcePath, fname, "scene.pkg"));
     if (flag) {
@@ -58,8 +58,9 @@ function random() {
 
 //读取并分类视频文件
 function getVideo(fname) {
+    mkdirsSync("./results/video");
     const dir = path.join(sourcePath, fname);
-    const videoDir = fs.readdirSync(dir);
+    const videoDir = getDir(dir);
     for (const nm in videoDir) {
         const fullNameArr = videoDir[nm].split('.');
         const arr = fullNameArr[fullNameArr.length - 1];
@@ -81,11 +82,12 @@ function getVideo(fname) {
 
 //读取解包图片文件
 function getPic() {
-    const targetDir = fs.readdirSync("./output");
+    mkdirsSync("./results/pic");
+    const targetDir = getDir("./output");
     let appendMark = 1;
     targetDir.forEach(fname => {
         const dir = `./output/${fname}/materials`;
-        const targetDir = fs.readdirSync(dir);
+        const targetDir = getDir(dir);
 
         for (const nm in targetDir) {
             const arr1 = targetDir[nm].split('.');
@@ -105,3 +107,20 @@ function getPic() {
         }
     });
 }
+
+//递归判断并创建目录
+function mkdirsSync(dirname) {
+    if (fs.existsSync(dirname)) {
+        return true;
+    } else {
+        if (mkdirsSync(path.dirname(dirname))) {
+            fs.mkdirSync(dirname);
+            return true;
+        }
+    }
+}
+
+function getDir(path_way) {
+    mkdirsSync(path_way);
+    return fs.readdirSync(path_way);
+};

@@ -1,0 +1,24 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Naughty Dog shared some beautiful Artwork for the Last of Us Part II, this is the day variant. I added a few effects to let the wallpaper come to life (wind effects, light, etc.)",
+	"file" : "scene.json",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.149 0.184 0.173"
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Game" ],
+	"title" : "The Last of Us Part II Day [Effects]",
+	"type" : "scene",
+	"visibility" : "public",
+	"workshopid" : "1995089753"
+}
